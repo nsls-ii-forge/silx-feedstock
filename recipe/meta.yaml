@@ -7,13 +7,13 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
-  script: python setup.py build install --single-version-externally-managed --record record.txt
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+  skip: True  # [py<36]
 
 requirements:
   build:
@@ -21,21 +21,19 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - setuptools
     - numpy
-
+    - pip
   run:
     - python
-    - setuptools
-    - {{ pin_compatible('numpy') }}
     - fabio >=0.7
     - h5py
-    - six
-    - mako
     - ipython
-    - qtconsole
+    - mako
     - matplotlib >=1.2.0
     - python-dateutil
+    - qtconsole
+    - six
+    - {{ pin_compatible('numpy') }}
     # optional dep causing lots of problems
     #- pyopengl
 
@@ -61,8 +59,3 @@ about:
     of Qt widgets to browse and visualize data.
   doc_url: https://pythonhosted.org/silx/
   dev_url: https://github.com/silx-kit/silx
-
-extra:
-  recipe-maintainers:
-    - CJ-Wright
-    - tschoonj
