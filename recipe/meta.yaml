@@ -1,0 +1,68 @@
+{% set name = "silx" %}
+{% set version = "0.11.0" %}
+{% set sha256 = "844a01f9c128d8d22c1e45fe0a4e00c80cb8fc3f080a0df6c6d0ee3bf6a94ca7" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  script: python setup.py build install --single-version-externally-managed --record record.txt
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - setuptools
+    - numpy
+
+  run:
+    - python
+    - setuptools
+    - {{ pin_compatible('numpy') }}
+    - fabio >=0.7
+    - h5py
+    - six
+    - mako
+    - ipython
+    - qtconsole
+    - matplotlib >=1.2.0
+    - python-dateutil
+    # optional dep causing lots of problems
+    #- pyopengl
+
+test:
+  imports:
+    - silx
+    - silx.test
+
+about:
+  home: https://github.com/silx-kit/silx
+  license: MIT
+  license_family: MIT
+  license_file: copyright
+  summary: 'The silx project aims at providing a collection of Python packages
+  to support the development of data assessment, reduction and analysis
+  applications at synchrotron radiation facilities.'
+
+  description: |
+    The silx project aims at providing a collection of Python packages to
+    support the development of data assessment, reduction and analysis
+    applications at synchrotron radiation facilities. It aims at providing
+    reading/writing different file formats, data reduction routines and a set
+    of Qt widgets to browse and visualize data.
+  doc_url: https://pythonhosted.org/silx/
+  dev_url: https://github.com/silx-kit/silx
+
+extra:
+  recipe-maintainers:
+    - CJ-Wright
+    - tschoonj
