@@ -46,11 +46,10 @@ about:
   home: https://github.com/silx-kit/silx
   license: MIT
   license_family: MIT
-  license_file: copyright
+  license_file: LICENSE
   summary: 'The silx project aims at providing a collection of Python packages
   to support the development of data assessment, reduction and analysis
   applications at synchrotron radiation facilities.'
-
   description: |
     The silx project aims at providing a collection of Python packages to
     support the development of data assessment, reduction and analysis
