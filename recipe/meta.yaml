@@ -1,6 +1,6 @@
 {% set name = "silx" %}
-{% set version = "0.11.0" %}
-{% set sha256 = "844a01f9c128d8d22c1e45fe0a4e00c80cb8fc3f080a0df6c6d0ee3bf6a94ca7" %}
+{% set version = "0.12.0" %}
+{% set sha256 = "2346ee44eb65ffa23c82d86f401282ea0fde0b813f897f178d901ec09889b9dc" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
   skip: True  # [py<36]
 
