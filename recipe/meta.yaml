@@ -1,6 +1,6 @@
 {% set name = "silx" %}
-{% set version = "0.13.0" %}
-{% set sha256 = "2853df6fe258f9a78ce6100ba81a19da6ca3e7aeffb815425a5992809932f24e" %}
+{% set version = "0.13.1" %}
+{% set sha256 = "8fbde3de6d8ef651dde487f662806b1814167173fca635405f979a52b1369d92" %}
 
 package:
   name: {{ name|lower }}
@@ -11,9 +11,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
-  skip: True  # [py<36]
+  skip: true  # [py<36]
 
 requirements:
   build:
@@ -48,9 +48,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'The silx project aims at providing a collection of Python packages
-  to support the development of data assessment, reduction and analysis
-  applications at synchrotron radiation facilities.'
+  summary: The silx project aims at providing a collection of Python packages to support the development of data assessment, reduction and analysis applications at synchrotron radiation facilities.
   description: |
     The silx project aims at providing a collection of Python packages to
     support the development of data assessment, reduction and analysis
