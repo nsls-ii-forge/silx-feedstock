@@ -5,9 +5,13 @@ Home: https://github.com/silx-kit/silx
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/silx-feedstock/blob/master/LICENSE.txt)
 
 Summary: The silx project aims at providing a collection of Python packages to support the development of data assessment, reduction and analysis applications at synchrotron radiation facilities.
+
+Development: https://github.com/silx-kit/silx
+
+Documentation: https://pythonhosted.org/silx/
 
 The silx project aims at providing a collection of Python packages to
 support the development of data assessment, reduction and analysis
