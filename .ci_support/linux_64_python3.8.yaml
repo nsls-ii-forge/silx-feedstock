@@ -13,7 +13,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '9'
 docker_image:
-- nsls2/nsls2forge:latest
+- quay.io/condaforge/linux-anvil-comp7
 numpy:
 - '1.16'
 pin_run_as_build:
