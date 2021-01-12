@@ -5,9 +5,13 @@ Home: https://github.com/silx-kit/silx
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/silx-feedstock/blob/master/LICENSE.txt)
 
 Summary: The silx project aims at providing a collection of Python packages to support the development of data assessment, reduction and analysis applications at synchrotron radiation facilities.
+
+Development: https://github.com/silx-kit/silx
+
+Documentation: https://pythonhosted.org/silx/
 
 The silx project aims at providing a collection of Python packages to
 support the development of data assessment, reduction and analysis
@@ -34,13 +38,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_python3.6</td>
-              <td>
-                <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=81&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/silx-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_python3.7</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=81&branchName=master">
@@ -55,10 +52,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.6</td>
+              <td>linux_64_python3.9</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=81&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/silx-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.6" alt="variant">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/silx-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.9" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -76,10 +73,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64_python3.6</td>
+              <td>osx_64_python3.9</td>
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=81&branchName=master">
-                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/silx-feedstock?branchName=master&jobName=win&configuration=win_64_python3.6" alt="variant">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/silx-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.9" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -94,6 +91,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=81&branchName=master">
                   <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/silx-feedstock?branchName=master&jobName=win&configuration=win_64_python3.8" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.9</td>
+              <td>
+                <a href="https://dev.azure.com/nsls2forge/nsls2forge/_build/latest?definitionId=81&branchName=master">
+                  <img src="https://dev.azure.com/nsls2forge/nsls2forge/_apis/build/status/silx-feedstock?branchName=master&jobName=win&configuration=win_64_python3.9" alt="variant">
                 </a>
               </td>
             </tr>
